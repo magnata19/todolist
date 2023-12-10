@@ -25,8 +25,8 @@ public class TaskControl {
         return ts.delete(id);
     }
 
-    @PutMapping("/change/{id}")
-    public ResponseEntity<?> change(@RequestBody TaskModel tm, @PathVariable Integer id){
+    @PutMapping("/change")
+    public ResponseEntity<?> change(@RequestBody TaskModel tm){
         return ts.registerChange(tm, "change");
     }
 
